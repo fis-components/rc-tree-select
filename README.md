@@ -1,0 +1,130 @@
+# rc-tree-select
+---
+
+React TreeSelect Component
+
+
+[![NPM version][npm-image]][npm-url]
+[![build status][travis-image]][travis-url]
+[![Test coverage][coveralls-image]][coveralls-url]
+[![gemnasium deps][gemnasium-image]][gemnasium-url]
+[![node version][node-image]][node-url]
+[![npm download][download-image]][download-url]
+[![Sauce Test Status](https://saucelabs.com/buildstatus/rc-tree-select)](https://saucelabs.com/u/rc-tree-select)
+
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/rc-tree-select.svg)](https://saucelabs.com/u/rc-tree-select)
+
+[npm-image]: http://img.shields.io/npm/v/rc-tree-select.svg?style=flat-square
+[npm-url]: http://npmjs.org/package/rc-tree-select
+[travis-image]: https://img.shields.io/travis/react-component/tree-select.svg?style=flat-square
+[travis-url]: https://travis-ci.org/react-component/tree-select
+[coveralls-image]: https://img.shields.io/coveralls/react-component/tree-select.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/react-component/tree-select?branch=master
+[gemnasium-image]: http://img.shields.io/gemnasium/react-component/tree-select.svg?style=flat-square
+[gemnasium-url]: https://gemnasium.com/react-component/tree-select
+[node-image]: https://img.shields.io/badge/node.js-%3E=_0.10-green.svg?style=flat-square
+[node-url]: http://nodejs.org/download/
+[download-image]: https://img.shields.io/npm/dm/rc-tree-select.svg?style=flat-square
+[download-url]: https://npmjs.org/package/rc-tree-select
+
+
+## Browser Support
+
+|![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)|
+| --- | --- | --- | --- | --- |
+| IE 8+ ✔ | Chrome 31.0+ ✔ | Firefox 31.0+ ✔ | Opera 30.0+ ✔ | Safari 7.0+ ✔ |
+
+## Screenshots
+
+<img src="https://os.alipayobjects.com/rmsportal/HUhyhmpWyiGKnZF.png" width="288"/>
+
+
+## Development
+
+```
+npm install
+npm start
+```
+
+## Example
+
+http://localhost:8000/examples/
+
+
+online example: http://react-component.github.io/tree-select/
+
+
+## Feature
+
+* support ie8,ie8+,chrome,firefox,safari
+
+### Keyboard
+
+
+## install
+
+
+[![rc-tree-select](https://nodei.co/npm/rc-tree-select.png)](https://npmjs.org/package/rc-tree-select)
+
+
+## Usage
+
+see examples
+
+## API
+
+### TreeSelect props
+
+| name     | description    | type     | default      |
+|----------|----------------|----------|--------------|
+|className | additional css class of root dom node | String | '' |
+|prefixCls | prefix class | String | '' |
+|animation | dropdown animation name. only support slide-up now | String | '' |
+|transitionName | dropdown css animation name | String | '' |
+|choiceTransitionName | css animation name for selected items at multiple mode | String | '' |
+|dropdownMatchSelectWidth | whether dropdown's with is same with select | bool | true |
+|dropdownClassName | additional className applied to dropdown | String | - |
+|dropdownStyle | additional style applied to dropdown | Object | {} |
+|notFoundContent | specify content to show when no result matches. | String | 'Not Found' |
+|showSearch | whether show search input in single mode | bool | true |
+|allowClear | whether allowClear | bool | false |
+|tags | when tagging is enabled the user can select from pre-existing options or create a new tag by picking the first choice, which is what the user has typed into the search box so far. | bool | false |
+|maxTagTextLength | max tag text length to show | number | - |
+|combobox | enable combobox mode(can not set multiple at the same time) | bool | false |
+|multiple | whether multiple select | bool | false |
+|disabled | whether disabled select | bool | false |
+|defaultValue | initial selected option(s) | String/Array<String> | - |
+|value | current selected option(s) | String/Array<String> | - |
+|onChange | called when select treeNode or input value change(combobox) | function(value, label) | - |
+|onSelect | called when select treeNode | function | - |
+|onSearch | called when input changed | function | - |
+|treeIcon | show tree icon | bool | false |
+|treeLine | show tree line | bool | false |
+|treeDefaultExpandAll | default expand all treeNode | bool | false |
+|treeCheckable | whether tree show checkbox (select callback will not fire) | bool | false |
+|filterTreeNode | filter some treeNodes as you need. it should return true | function(treeNode) | - |
+|treeNodeFilterProp | which prop value of treeNode will be used for filter if filterTreeNode return true | String | 'value' |
+|treeNodeLabelProp | which prop value of treeNode will render as content of select | String | 'value' |
+|loadData | load data asynchronously | function(node) | - |
+
+### TreeNode props
+
+| name     | description    | type     | default      |
+|----------|----------------|----------|--------------|
+|disabled | disable treeNode | bool | false |
+|key | the unique key of treeNode, you must setting  | String | - |
+|value | default as treeNodeFilterProp | String | '' |
+|title | tree/subTree's title | String | '---' |
+|isLeaf | whether it's leaf node | bool | false |
+
+
+## Test Case
+
+http://localhost:8000/tests/runner.html?coverage
+
+## Coverage
+
+http://localhost:8000/node_modules/rc-server/node_modules/node-jscover/lib/front-end/jscoverage.html?w=http://localhost:8000/tests/runner.html?coverage
+
+## License
+rc-tree-select is released under the MIT license.
