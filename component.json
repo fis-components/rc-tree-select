@@ -5,6 +5,13 @@
     "main": "./lib/index",
     "tag": "master",
     "reposType": "npm",
-    "dependencies": {},
-    "version": "0.3.6"
+    "dependencies": {
+        "classnames": "^2.2.1",
+        "object-assign": "^4.0.1",
+        "rc-animate": "^2.0.2",
+        "rc-tree": "^1.0.0",
+        "rc-trigger": "^1.0.6",
+        "rc-util": "^3.1.2"
+    },
+    "version": "1.1.1"
 }

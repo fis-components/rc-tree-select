@@ -96,7 +96,7 @@ see examples
 |defaultValue | initial selected option(s) | String/Array<String> | - |
 |value | current selected option(s) | String/Array<String> | - |
 |onChange | called when select treeNode or input value change(combobox) | function(value, label) | - |
-|onSelect | called when select treeNode | function | - |
+|onSelect | called when select treeNode | function(value, node) | - |
 |onSearch | called when input changed | function | - |
 |treeIcon | show tree icon | bool | false |
 |treeLine | show tree line | bool | false |
@@ -104,15 +104,17 @@ see examples
 |treeCheckable | whether tree show checkbox (select callback will not fire) | bool | false |
 |filterTreeNode | filter some treeNodes as you need. it should return true | function(treeNode) | - |
 |treeNodeFilterProp | which prop value of treeNode will be used for filter if filterTreeNode return true | String | 'value' |
-|treeNodeLabelProp | which prop value of treeNode will render as content of select | String | 'value' |
+|treeNodeLabelProp | which prop value of treeNode will render as content of select | String | 'title' |
+|treeData | treeNodes data Array, if set it then you need not to construct children TreeNode. (if value is not unique of the whole array, you must provide `key` as unique id) | array<{value, label, children}> | [] |
 |loadData | load data asynchronously | function(node) | - |
 
 ### TreeNode props
+> note: you'd better to use `treeData` instead of using TreeNode.
 
 | name     | description    | type     | default      |
 |----------|----------------|----------|--------------|
 |disabled | disable treeNode | bool | false |
-|key | the unique key of treeNode, you must setting  | String | - |
+|key | it's value must be unique across the tree's all TreeNode, you must set it  | String | - |
 |value | default as treeNodeFilterProp | String | '' |
 |title | tree/subTree's title | String | '---' |
 |isLeaf | whether it's leaf node | bool | false |
